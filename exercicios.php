@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <title>Grupo Musculares | PersonalPRO</title>
+    <title>Exercicios | PersonalPRO</title>
 </head>
 <body>
     <?php require_once "_parts/_menu.php" ?>
     
 <main class="container">
   <div class="mt-5 d-flex justify-content-between p-5">
-    <h3>Grupos Musculares</h3>
-    <a href="ger-gmusc.php" class="btn btn-success">Novo Grupo Muscular</a>
+    <h3>Exercícios</h3>
+    <a href="ger-exercicio.php" class="btn btn-success">Novo Exercício</a>
   </div>
 
   <table class="table p-3">
