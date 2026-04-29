@@ -8,7 +8,18 @@
     <title>Exercicios | PersonalPRO</title>
 </head>
 <body>
-    <?php require_once "_parts/_menu.php" ?>
+    <?php 
+    require_once "_parts/_menu.php";
+    
+    spl_autoload_register(function ($class) {
+      require_once "class/{$class}.class.php";
+    });
+
+    $exercicio = new Exercicio();
+
+    $exercicios = $exercicio->all();
+    
+    ?>
     
 <main class="container">
   <div class="mt-5 d-flex justify-content-between p-5">
@@ -19,13 +30,16 @@
   <table class="table p-3">
     <thead>
       <tr>
+        <th class="text-center">#</th>
         <th>Nome</th>
         <th class="text-center">Ações</th>
       </tr>
     </thead>
     <tbody>
+      <?php foreach($exercicios as $exec): ?>
       <tr>
-        <td>Ombro</td>
+        <td><?php echo $exec->idexercicio ?></td>
+        <td><?php echo $exec->nome ?></td>
         <td class="text-center">
             <a href="#" class="btn btn-outline-info btn-sm">
               <i class="bi bi-eye"></i>
@@ -38,6 +52,7 @@
             </a>
         </td>
       </tr>
+      <?php endforeach; ?>
     </tbody>
   </table>
     
