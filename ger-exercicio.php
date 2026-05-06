@@ -27,7 +27,7 @@
         <h4>Cadastro de exercício</h4>
     </div>
     <div class="card">
-      <form action="" method="post" class="row p-4 g3 mt-3">
+      <form action="db-exercicio.php" method="post" class="row p-4 g3 mt-3">
         <div class="col-12">
           <label for="nome" class="form-label">Nome</label>
           <input type="text" name="nome" id="nome" class="form-control">
@@ -48,7 +48,7 @@
 
         <div class="mt-3">
           <a href="gmuscular.php" class="btn btn-secondary" >Cancelar</a>
-          <button type="submit" class="btn btn-primary">Salvar</button>
+          <button type="submit" class="btn btn-primary" name="btnGravar">Salvar</button>
         </div>
       </form>
     </div>
