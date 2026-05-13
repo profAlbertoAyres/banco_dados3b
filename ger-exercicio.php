@@ -48,10 +48,17 @@
         </div>
         <div class="col-md-6">
           <label for="grupoMuscular" class="form-label">Grupo Muscular</label>
+          <?php
+             $grupo_sel = $exercicio->grupo_muscular;
+          ?>
           <select name="grupoMuscular" id="grupoMuscular" class="form-select">
             <option value="">Selecione...</option>
             <?php foreach( $grupoMuscular as $grupo ) : ?>
-            <option value="<?= $grupo ?>"><?= $grupo ?></option>
+            <option value="<?= $grupo ?>" 
+            <?php if($grupo == $grupo_sel) echo 'selected' ?>
+            >
+              <?= $grupo ?>
+            </option>
             <?php endforeach; ?>
           </select>
         </div>
